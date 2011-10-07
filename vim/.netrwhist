@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/roy/.rvm/gems/ree-1.8.7-2011.03/gems/actionpack-3.1.0'
+let g:netrw_dirhist_2='/Users/roy/.rvm/gems/ree-1.8.7-2011.03/gems/acts_as_list-0.1.4'
+let g:netrw_dirhist_3='/Users/roy/.rvm/gems/ree-1.8.7-2011.03/gems/activeadmin-0.3.1'
+let g:netrw_dirhist_4='/Users/roy/.rvm/gems/ree-1.8.7-2011.03/gems/savon-0.9.7'
+let g:netrw_dirhist_5='/Users/roy/.rvm/gems/ree-1.8.7-2011.03/gems/activesupport-3.1.0'
+let g:netrw_dirhist_6='/Users/roy/.rvm/gems/ree-1.8.7-2011.03/gems/gtalk-bot-1.0.1'
+let g:netrw_dirhist_7='/Users/roy/.rvm/gems/ree-1.8.7-2011.03/gems/paperclip-2.4.2'
