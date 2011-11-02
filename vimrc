@@ -1,31 +1,34 @@
 " Maintained by: Roy van der Meij
 " roy@royapps.nl
 
-set nocompatible "Always use vim mode, even when starting with vi
-set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set nocompatible                  " Always use vim mode, even when starting with vi
+
+silent! call pathogen#runtime_append_all_bundles()
 
 filetype on
 filetype plugin indent on
 syntax on
 
-call pathogen#runtime_append_all_bundles()
+runtime macros/matchit.vim        " Load the matchit plugin.
 
-set autoindent        "always set autoindenting on
-set history=50        "keep 50 lines in history
-set ruler             "always show cursor
-set showcmd           "display incomplete commands
-set mouse=a           "enable mouse
-set mousehide         "hide mouse when typing
-set number            "show line numbers
-set timeoutlen=500    "don't lag the leader key + command
-set nofoldenable      "don't fold by default
+set backspace=indent,eol,start    " Allow backspacing over everything in insert mode
 
-" tabs to spaces and 2 width
-set tabstop=2
+set autoindent                    " Always set autoindenting on
+set history=50                    " Keep 50 lines in history
+set ruler                         " Always show cursor
+set showcmd                       " Display incomplete commands
+set mouse=a                       " Enable mouse
+set mousehide                     " Hide mouse when typing
+set number                        " Show line numbers
+set timeoutlen=500                " Don't lag the leader key + command
+set nofoldenable                  " Don't fold by default
+
+set expandtab                     " Use spaces instead of tabs
+set tabstop=2                     " Global tab width
 set shiftwidth=2
 set softtabstop=2
 
-set listchars=tab:▸\ ,eol:¬ " fancy tabstops and eols symbols
+set listchars=tab:▸\ ,eol:¬       " fancy tabstops and eols symbols
 
 " Backup directories (don't polute project directory with .swp files)
 set backupdir=~/.vim/backup
@@ -42,11 +45,15 @@ autocmd BufReadPost *
 
 " Shortcuts
 nmap <leader>l :set list!<CR>
-:map <C-t> :FuzzyFinderTextMate<CR>
-:map <C-f> :ruby finder.rescan!<CR>
-:noremap ,n :NERDTreeToggle<CR>
-:noremap ,r :NERDTreeFind<CR>
+map <C-t> :FuzzyFinderTextMate<CR>
+map <C-f> :ruby finder.rescan!<CR>
+nmap ,n :NERDTreeToggle<CR>
+nmap ,r :NERDTreeFind<CR>
 map ,b :%s/></>\r</g<CR>:1<CR>=G " beautify xml
+
+" Emacs-like beginning and end of line.
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
 
 " easier window navigation
 nmap <C-h> <C-w>h
@@ -79,6 +86,7 @@ endif
 
 " filetype mappings
 au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile Watchr set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
 
 " load operating system specific settings
