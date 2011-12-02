@@ -84,6 +84,9 @@ else
   colorscheme molokai
 endif
 
+"colorscheme Tomorrow-Night
+colorscheme bespin
+
 " filetype mappings
 au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 au BufRead,BufNewFile Watchr set ft=ruby
