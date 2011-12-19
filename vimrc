@@ -73,6 +73,9 @@ command! Wq wq
 command! Vsp vsp
 command! Sp sp
 
+" tagbar
+nmap <F8> :TagbarToggle<CR>
+
 " set 256 colors
 set t_Co=256
 
