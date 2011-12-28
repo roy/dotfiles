@@ -1,8 +1,8 @@
 # Command Enhancements
 if [[ $(uname) == 'Linux' ]]; then
-  . ~/bin/dotfiles/bash/aliases_linux
+  . ~/dotfiles/bash/aliases_linux
 elif [[ $(uname) == 'Darwin' ]]; then
-  . ~/bin/dotfiles/bash/aliases_mac
+  . ~/dotfiles/bash/aliases_mac
 fi
 
 # Utility
@@ -218,7 +218,8 @@ ps1_git()
   esac
 
   [[ $color -gt 0 ]] &&
-    printf " \033[${attr}${color}m(${branch}$(ps1_git_status):$sha1)\033[0m"
+    printf "on \e[0;${color}m${branch}$(ps1_git_status)"
+    #printf " \033[${attr}${color}m(${branch}$(ps1_git_status):$sha1)\033[0m"
 }
 
 ps1_git_status()

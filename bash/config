@@ -42,15 +42,41 @@ BMAGENTA='\e[45m'
 	 BCYAN='\e[46m'
 	BWHITE='\e[47m'
 
+## user or root
+# if [ `whoami` != "root" ]; then
+
+smiley() {
+  if [ $1 == 0 ] ; then
+    echo ":)"
+  else
+    echo ":("
+  fi
+}
+#function homepath(){
+#  if [ -z "$SSH_CLIENT" ]; then
+#
+#  fi
+#  ;
+#}
 # Update the command prompt to be <user>:<current_directory>(git_branch) >
 # Note that the git branch is given a special color
 #PS1="\n\u:\w \[$EBLACK\]\$(parse_git_branch)\[$NO_COLOR\] \n→ "
-PS1="\n\[$EBLACK\][ \[$YELLOW\]\u@\h\[$NO_COLOR\] \[$BLUE\]\w \[$EBLACK\]]\$(ps1_git)\[$GREEN\]\$(ps1_rvm)\n\[$EBLACK\][\[$ERED\] \T \[$EBLACK\]] \[$NO_COLOR\]$ "
+#PS1="\n\[$EBLACK\][ \[$YELLOW\]\u@\h\[$NO_COLOR\] \[$BLUE\]\w \[$EBLACK\]]\$(ps1_git)\[$GREEN\]\$(ps1_rvm)\n\[$EBLACK\][\[$ERED\] \T \[$EBLACK\]] \[$NO_COLOR\]→"
+
+
+# working smiley
+#PS1="\w \`if [ \$? = 0 ]; then echo -e '\[\e[01;32m\]\n\xE2\x98\xBA'; else echo -e '\[\e[01;31m\]\n\xE2\x98\xB9'; fi\` \[\e[01;34m\]\[\e[00m\]"
+#PS1="\w \`if [ \$? = 0 ]; then echo -e '\xE2\x98\xBA'; else echo -e '\xE2\x98\xB9'; fi\` "
 
 #PS1="\[$BLUE\]\w\[$RED\]\$(parse_git_branch)\n\[$GREEN\]\u@\h\[$WHITE\]$ "
-	
+LPART="\n\[$YELLOW\]\u\[$NO_COLOR\] in \[$BLUE\]\w\[$NO_COLOR\] \$(ps1_git)"
+RPART="\[$MAGENTA\]\$(ps1_rvm)\[$NO_COLOR\]"
+PS1="$LPART $RPART\n\[$NO_COLOR\]✓ "
 PS2='> '
 PS4='+ '
+
+# pretty
+# PS1='\[\e[41m\]\[\e[1;37m\] \u \[\e[47m\]\[\e[1;30m\] \w \[\e[0m\]\[\e[1;37m\]\[\e[42m\] # \[\e[0m\] '
 
 #unset PROMPT_COMMAND
 #if [ "$SHELL" = '/bin/bash' ]
