@@ -1,0 +1,22 @@
+[user]
+	name = Roy van der Meij
+	email = royalain@gmail.com
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[diff]
+	external = git_diff_wrapper
+[push]
+	default = current
+[github]
+	user = roy
+	token = 02440939bb37974528a7f0637ff6e901
