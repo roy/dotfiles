@@ -4,7 +4,6 @@ if has("gui_running")
   set guifont=Monaco:h12
   "Font can be found at: https://github.com/andreberg/Meslo-Font
   "set guifont=Meslo\ LG\ S\ DZ:h11
-  set guifont=Consolas:h13
   set fuoptions=maxvert,maxhorz
   :map <D-enter> :set fullscreen! <CR>
   set co=150
