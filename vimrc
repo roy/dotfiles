@@ -5,8 +5,8 @@ set nocompatible                  " Always use vim mode, even when starting with
 
 silent! call pathogen#runtime_append_all_bundles()
 
-filetype on
-filetype plugin indent on
+"filetype plugin on
+filetype indent on
 syntax on
 
 runtime macros/matchit.vim        " Load the matchit plugin.
@@ -78,14 +78,6 @@ nmap <F8> :TagbarToggle<CR>
 
 " set 256 colors
 set t_Co=256
-
-if has('gui_running')
-  set background=light
-  colorscheme solarized
-else
-  set background=dark
-  colorscheme molokai
-endif
 
 "colorscheme Tomorrow-Night
 colorscheme bespin
