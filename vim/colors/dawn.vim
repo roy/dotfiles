@@ -49,7 +49,7 @@ hi Special ctermfg=232 ctermbg=NONE cterm=NONE guifg=#080808 guibg=NONE gui=NONE
 hi SpecialKey ctermfg=145 ctermbg=254 cterm=NONE guifg=#a2a2bc guibg=#e1e1e1 gui=NONE
 hi Statement ctermfg=95 ctermbg=NONE cterm=NONE guifg=#794938 guibg=NONE gui=NONE
 hi StorageClass ctermfg=125 ctermbg=NONE cterm=NONE guifg=#a71d5d guibg=NONE gui=italic
-hi String ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi String ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#0b6025 guibg=NONE gui=NONE
 hi Tag ctermfg=130 ctermbg=NONE cterm=NONE guifg=#bf4f24 guibg=NONE gui=NONE
 hi Title ctermfg=232 ctermbg=NONE cterm=bold guifg=#080808 guibg=NONE gui=bold
 hi Todo ctermfg=59 ctermbg=NONE cterm=inverse,bold guifg=#5a525f guibg=NONE gui=inverse,bold,italic
@@ -60,13 +60,13 @@ hi rubyFunction ctermfg=130 ctermbg=NONE cterm=NONE guifg=#bf4f24 guibg=NONE gui
 hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi rubySymbol ctermfg=88 ctermbg=NONE cterm=bold guifg=#811f24 guibg=NONE gui=bold
 hi rubyConstant ctermfg=54 ctermbg=NONE cterm=NONE guifg=#691c97 guibg=NONE gui=NONE
-hi rubyStringDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi rubyStringDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#0b6025 guibg=NONE gui=NONE
 hi rubyBlockParameter ctermfg=24 ctermbg=NONE cterm=NONE guifg=#234a97 guibg=NONE gui=NONE
 hi rubyInstanceVariable ctermfg=24 ctermbg=NONE cterm=NONE guifg=#234a97 guibg=NONE gui=NONE
 hi rubyInclude ctermfg=95 ctermbg=NONE cterm=NONE guifg=#794938 guibg=NONE gui=NONE
 hi rubyGlobalVariable ctermfg=24 ctermbg=NONE cterm=NONE guifg=#234a97 guibg=NONE gui=NONE
-hi rubyRegexp ctermfg=166 ctermbg=NONE cterm=NONE guifg=#cf5628 guibg=NONE gui=NONE
-hi rubyRegexpDelimiter ctermfg=166 ctermbg=NONE cterm=NONE guifg=#cf5628 guibg=NONE gui=NONE
+hi rubyRegexp ctermfg=166 ctermbg=NONE cterm=NONE guifg=#cf5628 guibg=NONE gui=italic
+hi rubyRegexpDelimiter ctermfg=166 ctermbg=NONE cterm=NONE guifg=#0b6025 guibg=NONE gui=NONE
 hi rubyEscape ctermfg=88 ctermbg=NONE cterm=bold guifg=#811f24 guibg=NONE gui=bold
 hi rubyControl ctermfg=95 ctermbg=NONE cterm=NONE guifg=#794938 guibg=NONE gui=NONE
 hi rubyClassVariable ctermfg=24 ctermbg=NONE cterm=NONE guifg=#234a97 guibg=NONE gui=NONE
