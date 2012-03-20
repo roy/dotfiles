@@ -5,7 +5,7 @@ set nocompatible                  " Always use vim mode, even when starting with
 
 silent! call pathogen#runtime_append_all_bundles()
 
-"filetype plugin on
+filetype plugin on
 filetype indent on
 syntax on
 
