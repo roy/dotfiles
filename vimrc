@@ -72,6 +72,7 @@ command! W w
 command! Wq wq
 command! Vsp vsp
 command! Sp sp
+command! Qa qa
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -80,7 +81,9 @@ nmap <F8> :TagbarToggle<CR>
 set t_Co=256
 
 "colorscheme Tomorrow-Night
-colorscheme bespin
+"colorscheme bespin
+colorscheme railscasts
+
 
 " filetype mappings
 au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
