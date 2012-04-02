@@ -9,6 +9,12 @@ filetype plugin on
 filetype indent on
 syntax on
 
+" set ruby path so ruby.vim can find it fast 
+" without this there is an extra 12 seconds of loading!!
+if !empty($MY_RUBY_HOME)
+   let g:ruby_path = join(split(glob($MY_RUBY_HOME.'/lib/ruby/*.*')."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*'),"\n"),',')
+endif
+
 runtime macros/matchit.vim        " Load the matchit plugin.
 
 set backspace=indent,eol,start    " Allow backspacing over everything in insert mode
