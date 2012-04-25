@@ -88,7 +88,8 @@ set t_Co=256
 
 "colorscheme Tomorrow-Night
 "colorscheme bespin
-colorscheme railscasts
+"colorscheme railscaists
+colorscheme molokai
 set transparency=1
 
 
