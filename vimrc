@@ -97,6 +97,7 @@ set transparency=1
 au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 au BufRead,BufNewFile Watchr set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
+au BufRead,BufNewFile *.hjs  set ft=handlebars
 
 " load operating system specific settings
 let uname = substitute(system("uname"),"\n","","g")
