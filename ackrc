@@ -25,6 +25,9 @@
 --type-set=haml=.haml
 --type-set=django=.inc,.py,.txt
 
+# Introduce CoffeeScript to ack
+--type-set=coffeescript=.coffee
+
 # Ignore vendor/ and log/ by default, for Rails projects
 --ignore-dir=log
 --ignore-dir=doc
