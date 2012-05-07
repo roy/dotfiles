@@ -3,7 +3,7 @@ if has("gui_running")
 
   "set guifont=Menlo:h10
   "set guifont=Monaco:h11
-  set guifont=inconsolata:h12
+  set guifont=inconsolata:h14
   "Font can be found at: https://github.com/andreberg/Meslo-Font
   "set guifont=Meslo\ LG\ S\ DZ:h11
   set fuoptions=maxvert,maxhorz
