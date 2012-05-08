@@ -90,7 +90,12 @@ set t_Co=256
 "colorscheme bespin
 "colorscheme railscaists
 colorscheme molokai
-set transparency=1
+colorscheme solarized
+set background=light
+set transparency=10
+
+
+set autoread
 
 
 " filetype mappings
