@@ -6,6 +6,10 @@ if has("gui_running")
   set guifont=inconsolata:h14
   "Font can be found at: https://github.com/andreberg/Meslo-Font
   "set guifont=Meslo\ LG\ S\ DZ:h11
+  "
+colorscheme solarized
+set background=light
+
   set fuoptions=maxvert,maxhorz
   :map <D-enter> :set fullscreen! <CR>
   set co=150

@@ -90,8 +90,7 @@ set t_Co=256
 "colorscheme bespin
 "colorscheme railscaists
 colorscheme molokai
-colorscheme solarized
-set background=light
+
 set transparency=10
 
 
