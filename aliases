@@ -37,3 +37,14 @@ alias rst='touch tmp/restart.txt'
 
 # commands starting with % for pasting from web
 alias %=' '
+
+powit(){
+  local basedir=${PWD}
+  local vhost=${PWD##*/}
+  if [ ! -h ~/.pow/$vhost ]
+        then
+                echo "pow: Symlinking your app with pow. ${vhost}"
+          [ ! -d ~/.pow/${vhost} ] && ln -s $basedir ~/.pow/$vhost
+    return 1
+  fi
+}
