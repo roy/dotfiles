@@ -91,7 +91,7 @@ set t_Co=256
 "colorscheme railscaists
 colorscheme molokai
 
-"set transparency=10
+set transparency=3
 
 
 set autoread

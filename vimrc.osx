@@ -7,8 +7,10 @@ if has("gui_running")
   "Font can be found at: https://github.com/andreberg/Meslo-Font
   "set guifont=Meslo\ LG\ S\ DZ:h11
   "
-colorscheme solarized
-set background=light
+"colorscheme solarized
+"set background=light
+colorscheme molokai
+set background=dark
 
   set fuoptions=maxvert,maxhorz
   :map <D-enter> :set fullscreen! <CR>
