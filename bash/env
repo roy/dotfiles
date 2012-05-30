@@ -23,10 +23,3 @@ export EDITOR="vim"
 export GEMEDITOR="mvim"
 export MANPATH="/usr/local/man:$MANPATH"
 alias fs='du -h -d 1 $1'
-
-export DYLD_LIBRARY_PATH=/usr/local/opt/instantclient      # Oracle instant Client
-export ORACLE_HOME=/usr/local/opt/instantclient
-export PATH=$PATH:$ORACLE_HOME
-export TNS_ADMIN=$ORACLE_HOME/network/admin
-export SQLPATH=$ORACLE_HOME
-export ORACLE_SID=asdb
