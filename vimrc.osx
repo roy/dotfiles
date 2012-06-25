@@ -9,7 +9,9 @@ if has("gui_running")
   "
 "colorscheme solarized
 "set background=light
-colorscheme molokai
+  "colorscheme molokai
+  colorscheme railscasts
+
 set background=dark
 
   set fuoptions=maxvert,maxhorz

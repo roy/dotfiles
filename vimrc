@@ -88,14 +88,13 @@ set t_Co=256
 
 "colorscheme Tomorrow-Night
 "colorscheme bespin
-"colorscheme railscaists
-colorscheme molokai
+colorscheme railscasts
+"colorscheme molokai
 
 set transparency=3
 
-
+"refresh on changes without confirmation
 set autoread
-
 
 " filetype mappings
 au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
