@@ -9,8 +9,8 @@ if has("gui_running")
   "
 "colorscheme solarized
 "set background=light
-  "colorscheme molokai
-  colorscheme railscasts
+  colorscheme smyck
+  "colorscheme railscasts
 
 set background=dark
 
