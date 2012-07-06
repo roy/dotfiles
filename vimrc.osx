@@ -1,15 +1,15 @@
 if has("gui_running")
   "set transparency=1
 
-  set guifont=Monaco:h11
+  "set guifont=Monaco:h11
   "Font can be found at: https://github.com/andreberg/Meslo-Font
-  "set guifont=Meslo\ LG\ S\ DZ:h11
+  set guifont=Meslo\ LG\ S\ DZ:h12
   set fuoptions=maxvert,maxhorz
   :map <D-enter> :set fullscreen! <CR>
   set co=150
   set lines=55
   set go-=T
-  set linespace=2
+  set linespace=1
   
   " remove scrollbars
   set guioptions-=r
