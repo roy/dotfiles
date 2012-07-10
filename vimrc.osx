@@ -19,7 +19,7 @@ set background=dark
   set co=150
   set lines=55
   set go-=T
-  set linespace=2
+  set linespace=1
   
   " remove scrollbars
   set guioptions-=r

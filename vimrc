@@ -36,6 +36,9 @@ set softtabstop=2
 
 set listchars=tab:▸\ ,eol:¬       " fancy tabstops and eols symbols
 
+" set rake as default build mechanism for vim"
+set makeprg=rake
+
 " Backup directories (don't polute project directory with .swp files)
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
@@ -88,19 +91,20 @@ set t_Co=256
 
 "colorscheme Tomorrow-Night
 "colorscheme bespin
-colorscheme railscasts
-"colorscheme molokai
 
 set transparency=3
 
 "refresh on changes without confirmation
 set autoread
+""colorscheme bespin
+colorscheme smyck
 
 " filetype mappings
-au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru,*.rabl}    set ft=ruby
 au BufRead,BufNewFile Watchr set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
 au BufRead,BufNewFile *.hjs  set ft=handlebars
+au BufRead,BufNewFile *.zsh-theme  set ft=sh
 
 " load operating system specific settings
 let uname = substitute(system("uname"),"\n","","g")
