@@ -34,3 +34,4 @@
 --ignore-dir=app/assets/javascripts/rogue/ace
 --ignore-dir=.sass-chache
 --ignore-dir=public/assets
+--ignore-dir=tmp
