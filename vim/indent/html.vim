@@ -101,6 +101,10 @@ call <SID>HtmlIndentPush('ul')
 call <SID>HtmlIndentPush('var')
 call <SID>HtmlIndentPush('dl')
 call <SID>HtmlIndentPush('dt')
+call <SID>HtmlIndentPush('section')
+call <SID>HtmlIndentPush('article')
+call <SID>HtmlIndentPush('header')
+call <SID>HtmlIndentPush('footer')
 
 
 " [-- <ELEMENT ? O O ...> --]
