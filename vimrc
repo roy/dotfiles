@@ -34,6 +34,11 @@ set tabstop=2                     " Global tab width
 set shiftwidth=2
 set softtabstop=2
 
+"set virtualedit=onemore 	   	" allow for cursor beyond last character
+set cursorline  				" highlight current line
+set incsearch					" find as you type search
+
+
 set listchars=tab:▸\ ,eol:¬       " fancy tabstops and eols symbols
 
 " set rake as default build mechanism for vim"
@@ -91,13 +96,11 @@ set t_Co=256
 
 "colorscheme Tomorrow-Night
 "colorscheme bespin
-
+colorscheme smyck
 set transparency=3
 
 "refresh on changes without confirmation
 set autoread
-""colorscheme bespin
-colorscheme smyck
 
 " filetype mappings
 au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru,*.rabl}    set ft=ruby
