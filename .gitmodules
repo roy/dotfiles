@@ -40,3 +40,6 @@
 [submodule "vim/bundle/bundler"]
 	path = vim/bundle/bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "vim/bundle/html5"]
+	path = vim/bundle/html5
+	url = git://github.com/othree/html5.vim.git
