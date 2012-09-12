@@ -1,0 +1,25 @@
+#!/usr/bin/ruby -w
+
+@generator = "vcvncvcnvc"
+@alphabet = {
+  "v" => %w(a e i o u),
+  "c" => %w(b c d f g h j k l m n p q r s t v w x z),
+  "n" => %w(1 2 3 4 5 6 7 8 9 0)
+}
+
+if ARGV.first
+  length = ARGV.first.to_i
+
+  @generator += "vcvncvcnvc" until @generator.length > length
+  @generator = @generator[0..length-1]
+end
+
+
+password = @generator.each_char.collect do |chr|
+  chars = @alphabet[chr]
+  char = chars[rand(chars.length)]
+  rand(2) == 1 ? char.upcase! : char unless chr == "n"
+  char
+end.join("")
+
+puts password
