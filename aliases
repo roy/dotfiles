@@ -23,6 +23,7 @@ alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG
 alias git co="git checkout"
 alias 'git st'="git status"
 alias git ci="git commit"
+alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 
 # rails

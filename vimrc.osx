@@ -2,8 +2,8 @@ if has("gui_running")
   "set transparency=1
 
   "set guifont=Menlo:h10
-  "set guifont=Monaco:h11
-  set guifont=inconsolata:h12
+  set guifont=Monaco:h11
+  "set guifont=inconsolata:h12
   "Font can be found at: https://github.com/andreberg/Meslo-Font
   "set guifont=Meslo\ LG\ S\ DZ:h11
   "

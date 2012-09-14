@@ -35,7 +35,7 @@ set shiftwidth=2
 set softtabstop=2
 
 "set virtualedit=onemore 	   	" allow for cursor beyond last character
-set cursorline  				" highlight current line
+"set cursorline  				" highlight current line
 set incsearch					" find as you type search
 
 
