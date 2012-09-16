@@ -39,7 +39,7 @@ alias rst='touch tmp/restart.txt'
 alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias reload!="touch tmp/restart.txt; echo 'Reloading app'"
 alias reload1="touch tmp/restart.txt; echo 'Reloading app'"
-alias repow="touch ~/.pow/restart.txt; echo 'Reloading pow'"
+alias repow!="touch ~/.pow/restart.txt; echo 'Reloading pow'"
 alias devlog='tail -f log/development.log'
 alias guard='bundle exec guard'
 
