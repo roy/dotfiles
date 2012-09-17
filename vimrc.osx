@@ -22,6 +22,7 @@ set background=dark
   " remove scrollbars
   set guioptions-=r
   set guioptions-=L
+  set hlsearch
 
   "tab switching in normal mode
   map <D-1> :tabn 1<CR>
