@@ -1,0 +1,5 @@
+
+#!/bin/sh
+
+/Applications/MacVim.app/Contents/MacOS/Vim -d -g "$2" "$5" | cat
+
