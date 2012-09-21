@@ -97,7 +97,6 @@ set t_Co=256
 "colorscheme Tomorrow-Night
 "colorscheme bespin
 colorscheme smyck
-set transparency=3
 
 "refresh on changes without confirmation
 set autoread
