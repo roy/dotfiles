@@ -1,0 +1,21 @@
+[user]
+	name = Roy van der Meij
+	email = roy@royapps.nl
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+
+[push]
+	default = current
+
+[core]
+	excludesfile = /Users/roy/.gitignore_global
