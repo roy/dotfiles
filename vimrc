@@ -107,3 +107,10 @@ if uname == "Linux" "ubuntu stuff
 elseif uname == "Darwin" "osx stuff
   :so ~/dotfiles/vimrc.osx
 endif
+
+
+" disable arrow keys "
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
