@@ -43,3 +43,12 @@
 [submodule "vim/bundle/html5"]
 	path = vim/bundle/html5
 	url = git://github.com/othree/html5.vim.git
+[submodule "vim/bundle/tmux"]
+	path = vim/bundle/tmux
+	url = git://github.com/zaiste/tmux.vim.git
+[submodule "vim/bundle/xterm-color-table"]
+	path = vim/bundle/xterm-color-table
+	url = git://github.com/guns/xterm-color-table.vim
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
