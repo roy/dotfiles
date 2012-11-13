@@ -99,6 +99,7 @@ au BufRead,BufNewFile Watchr set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
 au BufRead,BufNewFile *.hjs  set ft=handlebars
 au BufRead,BufNewFile *.zsh-theme  set ft=sh
+au BufRead,BufNewFile *.as set ft=actionscript
 
 " load operating system specific settings
 let uname = substitute(system("uname"),"\n","","g")
@@ -107,3 +108,7 @@ if uname == "Linux" "ubuntu stuff
 elseif uname == "Darwin" "osx stuff
   :so ~/dotfiles/vimrc.osx
 endif
+
+" CntrP settings
+let g:ctrlp_map = '<c-t>'
+let g:ctrlp_cmd = 'CtrlP'
