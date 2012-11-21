@@ -112,3 +112,28 @@ endif
 " CntrP settings
 let g:ctrlp_map = '<c-t>'
 let g:ctrlp_cmd = 'CtrlP'
+
+
+
+" jamessan's
+""set statusline=   " clear the statusline for when vimrc is reloaded
+""set statusline+=%f\                          " file name
+""set statusline+=%h%m%r%w                     " flags
+""set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
+""set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
+""set statusline+=%{&fileformat}]              " file format
+""set statusline+=%=                           " right align
+"""set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
+"""set statusline+=%b,0x%-8B\                   " current char
+""set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
+
+" spiiph's
+set statusline=
+set statusline+=%#warningmsg#%{SyntasticStatuslineFlag()}%*\  "syntax errors"
+set statusline+=%<\                       " cut at start
+"set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
+set statusline+=%-40f\                    " path
+set statusline+=%=%1*%y%*%*\              " file type
+set statusline+=%10((%l,%c)%)\            " line and column
+set statusline+=%{fugitive#statusline()}\  "git branch"
+set statusline+=%P                       " percentage of file
