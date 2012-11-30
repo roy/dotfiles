@@ -10,7 +10,7 @@ if has("gui_running")
   set co=150
   set lines=55
   set go-=T
-  set linespace=1
+  set linespace=2
   
   " remove scrollbars
   set guioptions-=r

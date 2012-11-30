@@ -91,7 +91,9 @@ set t_Co=256
 "colorscheme Tomorrow-Night
 "colorscheme bespin
 "colorscheme smyck
-colorscheme molokai
+"colorscheme molokai
+colorscheme railscasts
+set cursorline
 
 " filetype mappings
 au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru,*.rabl}    set ft=ruby

@@ -31,7 +31,9 @@ hi Cursor                    guibg=#FFFFFF
 hi CursorLine                guibg=#333435
 hi Search                    guibg=#5A647E
 hi Visual                    guibg=#5A647E
-hi LineNr                    guibg=#333435 guifg=#777777 gui=NONE
+""hi LineNr                    guibg=#333435 guifg=#777777 gui=NONE
+hi LineNr                    guibg=#464646 guifg=#72706d gui=NONE
+hi CursorLineNr guifg=#050505
 hi StatusLine                guibg=#414243 gui=NONE guifg=#E6E1DC
 hi StatusLineNC              guibg=#414243 gui=NONE
 hi VertSplit                 guibg=#414243 gui=NONE guifg=#414243
