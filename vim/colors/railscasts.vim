@@ -52,6 +52,10 @@ hi SpecialKey                guifg=#777777 gui=NONE
 " ----
 " directory names and other special names in listings
 hi Directory                 guifg=#A5C261 gui=NONE
+"blue
+hi Directory                 guifg=#6D9CBE gui=NONE 
+" gray
+hi Directory                 guifg=#999999 gui=NONE
 
 " Popup Menu
 " ----------

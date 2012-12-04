@@ -8,3 +8,5 @@ if has("gui_macvim")
   "let g:ctrlp_map = '<c-t>'
   "let g:ctrlp_cmd = 'CtrlP'
 end
+
+colorscheme railscasts

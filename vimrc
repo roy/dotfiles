@@ -35,6 +35,7 @@ set shiftwidth=2
 set softtabstop=2
 
 set listchars=tab:▸\ ,eol:¬       " fancy tabstops and eols symbols
+set cursorline                    " highlight current line
 
 " set rake as default build mechanism for vim"
 set makeprg=rake
@@ -91,9 +92,7 @@ set t_Co=256
 "colorscheme Tomorrow-Night
 "colorscheme bespin
 "colorscheme smyck
-"colorscheme molokai
-colorscheme railscasts
-set cursorline
+colorscheme molokai
 
 " filetype mappings
 au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru,*.rabl}    set ft=ruby
