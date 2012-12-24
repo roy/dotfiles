@@ -34,7 +34,7 @@ set tabstop=2                     " Global tab width
 set shiftwidth=2
 set softtabstop=2
 
-set listchars=tab:▸\ ,eol:¬       " fancy tabstops and eols symbols
+"set listchars=tab:▸\ ,eol:¬       " fancy tabstops and eols symbols
 set cursorline                    " highlight current line
 
 " set rake as default build mechanism for vim"
@@ -54,7 +54,7 @@ autocmd BufReadPost *
   \ endif
 
 " Shortcuts
-nmap <leader>l :set list!<CR>
+"nmap <leader>l :set list!<CR>
 map <C-t> :FuzzyFinderTextMate<CR>
 map <C-f> :ruby finder.rescan!<CR>
 nmap ,n :NERDTreeToggle<CR>
@@ -138,3 +138,9 @@ set statusline+=%=%1*%y%*%*\              " file type
 set statusline+=%10((%l,%c)%)\            " line and column
 set statusline+=%{fugitive#statusline()}\  "git branch"
 set statusline+=%P                       " percentage of file
+
+set makeprg=ruby\ %
+set shell=/bin/sh
+
+nmap <C-r> :make<CR>
+let g:rubytest_cmd_spec = "ruby %p"
