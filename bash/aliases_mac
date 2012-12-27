@@ -21,4 +21,3 @@ alias l='ls -lhGt'  # -l long listing, most recent first
 alias lh="ls -lh"
 alias ll='ls -lhG'  # -l long listing, human readable, no group info
 alias lt='ls -lt' # sort with recently modified first
-alias vim='mvim -v'
