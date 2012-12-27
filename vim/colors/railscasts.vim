@@ -26,14 +26,14 @@ let g:colors_name = "railscasts"
 " Light Green  #A5C261
 " Tan          #FFC66D
 
-hi Normal                    guifg=#E6E1DC guibg=#2B2B2B
-hi Cursor                    guibg=#FFFFFF
-hi CursorLine                guibg=#333435
-hi Search                    guibg=#5A647E
-hi Visual                    guibg=#5A647E
+hi Normal                    guifg=#E6E1DC guibg=#2B2B2B ctermbg=234
+hi Cursor                    guibg=#FFFFFF ctermfg=0 ctermbg=15
+hi CursorLine                guibg=#333435 ctermbg=235 cterm=NONE
+hi Search                    guibg=#5A647E ctermfg=NONE ctermbg=235
+hi Visual                    guibg=#5A647E ctermbg=60
 ""hi LineNr                    guibg=#333435 guifg=#777777 gui=NONE
-hi LineNr                    guibg=#464646 guifg=#72706d gui=NONE
-hi CursorLineNr guifg=#050505
+hi LineNr                    guibg=#464646 guifg=#72706d gui=NONE ctermfg=239 ctermbg=235
+hi CursorLineNr              guifg=#050505 ctermbg=233 cterm=NONE
 hi StatusLine                guibg=#414243 gui=NONE guifg=#E6E1DC
 hi StatusLineNC              guibg=#414243 gui=NONE
 hi VertSplit                 guibg=#414243 gui=NONE guifg=#414243
@@ -46,7 +46,7 @@ hi Folded                    guifg=#F6F3E8 guibg=#444444 gui=NONE
 " Invisible Characters
 " ------------------
 hi NonText                   guifg=#777777 gui=NONE
-hi SpecialKey                guifg=#777777 gui=NONE
+hi SpecialKey                guifg=#777777 gui=NONE ctermfg=167
 
 " Misc
 " ----
@@ -70,70 +70,70 @@ hi PMenuThumb                guibg=#AAAAAA gui=NONE
 
 
 "rubyComment
-hi Comment                   guifg=#BC9458 gui=italic
+hi Comment                   guifg=#BC9458 gui=italic ctermfg=180
 hi Todo                      guifg=#BC9458 guibg=NONE gui=italic
 
 "rubyPseudoVariable
 "nil, self, symbols, etc
-hi Constant                  guifg=#6D9CBE
+hi Constant                  guifg=#6D9CBE ctermfg=73
 
 "rubyClass, rubyModule, rubyDefine
 "def, end, include, etc
-hi Define                    guifg=#CC7833
+hi Define                    guifg=#CC7833 ctermfg=173
 
 "rubyInterpolation
-hi Delimiter                 guifg=#519F50
+hi Delimiter                 guifg=#519F50 ctermfg=143
 
 "rubyError, rubyInvalidVariable
-hi Error                     guifg=#FFFFFF guibg=#990000
+hi Error                     guifg=#FFFFFF guibg=#990000 ctermfg=221 ctermbg=88
 
 "rubyFunction
-hi Function                  guifg=#FFC66D gui=NONE
+hi Function                  guifg=#FFC66D gui=NONE ctermfg=221 cterm=NONE
 
 "rubyIdentifier
 "@var, @@var, $var, etc
-hi Identifier                guifg=#D0D0FF gui=NONE
+hi Identifier                guifg=#D0D0FF gui=NONE ctermfg=73 cterm=NONE
 
 "rubyInclude
 "include, autoload, extend, load, require
-hi Include                   guifg=#CC7833 gui=NONE
+hi Include                   guifg=#CC7833 gui=NONE ctermfg=173 cterm=NONE
 
 "rubyKeyword, rubyKeywordAsMethod
 "alias, undef, super, yield, callcc, caller, lambda, proc
-hi Keyword                   guifg=#CC7833
+hi Keyword                   guifg=#CC7833 ctermfg=173 cterm=NONE
 
 " same as define
-hi Macro                     guifg=#CC7833 gui=NONE
+hi Macro                     guifg=#CC7833 gui=NONE ctermfg=173
 
 "rubyInteger
-hi Number                    guifg=#A5C261
+hi Number                    guifg=#A5C261 ctermfg=107
 
 " #if, #else, #endif
-hi PreCondit                 guifg=#CC7833 gui=NONE
+hi PreCondit                 guifg=#CC7833 gui=NONE ctermfg=173 cterm=NONE
 
 " generic preprocessor
-hi PreProc                   guifg=#CC7833 gui=NONE
+hi PreProc                   guifg=#CC7833 gui=NONE ctermfg=103
 
 "rubyControl, rubyAccess, rubyEval
 "case, begin, do, for, if unless, while, until else, etc.
-hi Statement                 guifg=#CC7833 gui=NONE
+hi Statement                 guifg=#CC7833 gui=NONE ctermfg=173 cterm=NONE
 
 "rubyString
-hi String                    guifg=#A5C261
+hi String                    guifg=#A5C261 ctermfg=107
 
-hi Title                     guifg=#FFFFFF
+hi Title                     guifg=#FFFFFF ctermfg=15
 
 "rubyConstant
-hi Type                      guifg=#DA4939 gui=NONE
+hi Type                      guifg=#DA4939 gui=NONE ctermfg=167 cterm=NONE
 
-hi DiffAdd                   guifg=#E6E1DC guibg=#144212
-hi DiffDelete                guifg=#E6E1DC guibg=#660000
+hi DiffAdd                   guifg=#E6E1DC guibg=#144212 ctermfg=7 ctermbg=71
+hi DiffDelete                guifg=#E6E1DC guibg=#660000 ctermfg=7 ctermbg=52
 
 hi link htmlTag              xmlTag
 hi link htmlTagName          xmlTagName
 hi link htmlEndTag           xmlEndTag
 
-hi xmlTag                    guifg=#E8BF6A
-hi xmlTagName                guifg=#E8BF6A
-hi xmlEndTag                 guifg=#E8BF6A
+hi xmlTag                    guifg=#E8BF6A ctermfg=179
+hi xmlTagName                guifg=#E8BF6A ctermfg=179
+hi xmlEndTag                 guifg=#E8BF6A ctermfg=179
 
