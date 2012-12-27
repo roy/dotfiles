@@ -153,9 +153,9 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 
 " window management
 "set winwidth=84
-set winheight=10
-set winminheight=10
-set winheight=999
+"set winheight=10
+"set winminheight=10
+"set winheight=999
 
 " switch between the last two files
 nnoremap <leader><leader> <c-^>
