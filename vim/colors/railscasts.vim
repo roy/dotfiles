@@ -26,27 +26,26 @@ let g:colors_name = "railscasts"
 " Light Green  #A5C261
 " Tan          #FFC66D
 
-hi Normal                    guifg=#E6E1DC guibg=#2B2B2B ctermbg=234
-hi Cursor                    guibg=#FFFFFF ctermfg=0 ctermbg=15
-hi CursorLine                guibg=#333435 ctermbg=235 cterm=NONE
-hi Search                    guibg=#5A647E ctermfg=NONE ctermbg=235
-hi Visual                    guibg=#5A647E ctermbg=60
-""hi LineNr                    guibg=#333435 guifg=#777777 gui=NONE
-hi LineNr                    guibg=#464646 guifg=#72706d gui=NONE ctermfg=239 ctermbg=235
-hi CursorLineNr              guifg=#050505 ctermbg=233 cterm=NONE
-hi StatusLine                guibg=#414243 gui=NONE guifg=#E6E1DC
-hi StatusLineNC              guibg=#414243 gui=NONE
-hi VertSplit                 guibg=#414243 gui=NONE guifg=#414243
+hi Normal                    guibg=#2B2B2B guifg=#E6E1DC                ctermbg=234
+hi Cursor                    guibg=#FFFFFF                ctermfg=0     ctermbg=15
+hi CursorLine                guibg=#333435                              ctermbg=235 cterm=NONE
+hi Search                    guibg=#5A647E                ctermfg=NONE  ctermbg=235
+hi Visual                    guibg=#5A647E                              ctermbg=60
+hi LineNr                    guibg=#464646 guifg=#72706d  ctermfg=239   ctermbg=235 gui=NONE 
+hi CursorLineNr              guifg=#050505                              ctermbg=233 cterm=NONE
+hi StatusLine                guibg=#414243 guifg=#E6E1DC  ctermfg=243   ctermbg=235 gui=NONE
+hi StatusLineNC              guibg=#414243                ctermfg=239   ctermbg=235 gui=NONE
+hi VertSplit                 guibg=#414243 guifg=#414243  ctermfg=239   ctermbg=235 gui=NONE
 
 " Folds
 " -----
 " line used for closed folds
-hi Folded                    guifg=#F6F3E8 guibg=#444444 gui=NONE
+hi Folded                    guibg=#444444 guifg=#F6F3E8                            gui=NONE
 
 " Invisible Characters
 " ------------------
 hi NonText                   guifg=#777777 gui=NONE
-hi SpecialKey                guifg=#777777 gui=NONE ctermfg=167
+hi SpecialKey                guifg=#777777 ctermfg=167 gui=NONE
 
 " Misc
 " ----
@@ -112,7 +111,7 @@ hi Number                    guifg=#A5C261 ctermfg=107
 hi PreCondit                 guifg=#CC7833 gui=NONE ctermfg=173 cterm=NONE
 
 " generic preprocessor
-hi PreProc                   guifg=#CC7833 gui=NONE ctermfg=103
+hi PreProc                   guifg=#CC7833 gui=NONE ctermfg=173
 
 "rubyControl, rubyAccess, rubyEval
 "case, begin, do, for, if unless, while, until else, etc.
@@ -136,4 +135,6 @@ hi link htmlEndTag           xmlEndTag
 hi xmlTag                    guifg=#E8BF6A ctermfg=179
 hi xmlTagName                guifg=#E8BF6A ctermfg=179
 hi xmlEndTag                 guifg=#E8BF6A ctermfg=179
+
+highlight MatchParen ctermbg=60
 
