@@ -94,6 +94,9 @@ set t_Co=256
 "colorscheme smyck
 "colorscheme molokai
 "colorscheme grb256
+"let g:solarized_termcolors=256
+"set background=dark
+"colorscheme solarized
 colorscheme railscasts
 
 " filetype mappings
