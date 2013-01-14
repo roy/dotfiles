@@ -34,7 +34,9 @@ set tabstop=2                     " Global tab width
 set shiftwidth=2
 set softtabstop=2
 
-"set listchars=tab:▸\ ,eol:¬       " fancy tabstops and eols symbols
+" set listchars=eol:¬,tab:▸\ ,trail:~,extends:>,precedes:< " fancy tabstops and eols symbols
+set listchars=tab:▸\ ,extends:>,precedes:< " fancy tabstops and eols symbols
+set list
 set cursorline                    " highlight current line
 
 " set rake as default build mechanism for vim"
@@ -54,7 +56,7 @@ autocmd BufReadPost *
   \ endif
 
 " Shortcuts
-"nmap <leader>l :set list!<CR>
+nmap <leader>l :set list!<CR>
 map <C-t> :FuzzyFinderTextMate<CR>
 map <C-f> :ruby finder.rescan!<CR>
 nmap ,n :NERDTreeToggle<CR>
@@ -147,7 +149,7 @@ set statusline+=%P                       " percentage of file
 set makeprg=ruby\ %
 set shell=bash
 
-nmap <C-m> :make<CR>
+"nmap <C-m> :make<CR>
 let g:rubytest_cmd_spec = "ruby %p"
 
 " fast rails navigation
@@ -214,10 +216,10 @@ function! RunTests(filename)
     else
         if filereadable("script/test")
             exec ":!script/test " . a:filename
-        elseif filereadable("Gemfile")
-            exec ":!bundle exec rspec --color " . a:filename
+        "elseif filereadable("Gemfile")
+        "    exec ":!bundle exec rspec --color " . a:filename
         else
-            exec ":!rspec --color " . a:filename
+            exec ":!rspec --color --format documentation " . a:filename
         end
     end
 endfunction
@@ -225,3 +227,10 @@ endfunction
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
       \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
+highlight def link rubyRspec Function
+
+
+" set clipboard to system clipboard
+set clipboard=unnamed

@@ -44,7 +44,7 @@ hi Folded                    guibg=#444444 guifg=#F6F3E8                        
 
 " Invisible Characters
 " ------------------
-hi NonText                   guifg=#777777 gui=NONE
+hi NonText                   guifg=#777777 gui=NONE ctermfg=239
 hi SpecialKey                guifg=#777777 ctermfg=167 gui=NONE
 
 " Misc
