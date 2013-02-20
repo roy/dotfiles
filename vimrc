@@ -245,3 +245,12 @@ inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
+
+" xmpfilter
+nmap <buffer> <F5> <Plug>(xmpfilter-run)
+xmap <buffer> <F5> <Plug>(xmpfilter-run)
+imap <buffer> <F5> <Plug>(xmpfilter-run)
+
+nmap <buffer> <F4> <Plug>(xmpfilter-mark)
+xmap <buffer> <F4> <Plug>(xmpfilter-mark)
+imap <buffer> <F4> <Plug>(xmpfilter-mark)
