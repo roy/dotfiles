@@ -34,7 +34,7 @@ set tabstop=2                     " Global tab width
 set shiftwidth=2
 set softtabstop=2
 
-" set listchars=eol:¬,tab:▸\ ,trail:~,extends:>,precedes:< " fancy tabstops and eols symbols
+"set listchars=eol:¬,tab:▸\ ,trail:~,extends:>,precedes:< " fancy tabstops and eols symbols
 set listchars=tab:▸\ ,extends:>,precedes:< " fancy tabstops and eols symbols
 set list
 set cursorline                    " highlight current line
@@ -175,6 +175,7 @@ map <leader>A :call RunTests('')<cr>
 map <leader>c :w\|:!script/features<cr>
 map <leader>w :w\|:!script/features --profile wip<cr>
 
+
 function! RunTestFile(...)
     if a:0
         let command_suffix = a:1
@@ -233,4 +234,14 @@ highlight def link rubyRspec Function
 
 
 " set clipboard to system clipboard
-set clipboard=unnamed
+""set clipboard=unnamed
+
+" Vim... Live it... "
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
