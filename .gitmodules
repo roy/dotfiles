@@ -64,6 +64,3 @@
 [submodule "vim/bundle/vim-ruby-xmpfilter"]
 	path = vim/bundle/vim-ruby-xmpfilter
 	url = git://github.com/t9md/vim-ruby-xmpfilter.git
-[submodule "vim/bundle/vim-gitgutter"]
-	path = vim/bundle/vim-gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
