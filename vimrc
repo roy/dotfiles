@@ -46,6 +46,8 @@ filetype plugin indent on     " required!
 
 syntax enable
 
+set encoding=utf-8
+
 " CntrP settings
 let g:ctrlp_map = '<c-t>'
 let g:ctrlp_cmd = 'CtrlP'
