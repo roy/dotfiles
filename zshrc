@@ -29,7 +29,7 @@ ZSH_THEME="royvandermeij"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git capistrano ruby)
+plugins=(git royvandermeij capistrano ruby)
 
 #znotify[ignore]=(vim emacs man less ssh)
 #znotify[on_complete]="growlnotify -t $command_name -m 'elapsed $formatted_elapsed_time.'"
