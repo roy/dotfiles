@@ -34,7 +34,6 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'mileszs/ack.vim'
 Bundle 'guns/xterm-color-table.vim'
 Bundle 'kchmck/vim-coffee-script'
-"Bundle 'xenoterracide/html.vim'
 Bundle 'othree/html5.vim'
 
 filetype plugin indent on     " required!

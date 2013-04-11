@@ -1,0 +1,21 @@
+[user]
+  name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
+  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+
+[push]
+  default = current
+
+[core]
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
