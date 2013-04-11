@@ -36,6 +36,7 @@ Bundle 'guns/xterm-color-table.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'airblade/vim-gitgutter'
 
 " statusline
 set laststatus=2
