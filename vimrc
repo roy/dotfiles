@@ -35,6 +35,12 @@ Bundle 'mileszs/ack.vim'
 Bundle 'guns/xterm-color-table.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5.vim'
+Bundle 'Lokaltog/vim-powerline'
+
+" statusline
+set laststatus=2
+let g:Powerline_symbols='unicode'
+let g:Powerline_dividers_override= [ '', [0x2502], '', [0x2502] ]
 
 filetype plugin indent on     " required!
 
@@ -203,7 +209,7 @@ vnoremap < <gv
 vnoremap > >gv 
 
 " automatically reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
+" au BufWritePost .vimrc so ~/.vimrc
 
 " open last/alternate buffer
 noremap <Leader><Leader> <C-^>
@@ -224,3 +230,4 @@ command! Vsp vsp
 
 set nofoldenable                  " Don't fold by default
 set foldlevel=99
+
