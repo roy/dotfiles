@@ -12,6 +12,12 @@ export EDITOR="/usr/bin/mvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+alias ll='ls -lrthG'
 
 # add plugin's bin directory to path
 export PATH="$PATH:$HOME/.bin"
+
+# Show contents of directory after cd-ing into it
+chpwd() {
+  ls -lrthG
+}
