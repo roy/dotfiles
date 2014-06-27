@@ -136,5 +136,5 @@ hi xmlTag                    guifg=#E8BF6A ctermfg=179
 hi xmlTagName                guifg=#E8BF6A ctermfg=179
 hi xmlEndTag                 guifg=#E8BF6A ctermfg=179
 
-highlight MatchParen ctermbg=60
-
+highlight MatchParen ctermbg=60 
+hi Search cterm=underline

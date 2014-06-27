@@ -19,24 +19,37 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
-Bundle 'kien/ctrlp.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'nono/vim-handlebars'
-Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-liquid'
 Bundle 'tpope/vim-endwise'
-Bundle 'tsaleh/vim-align'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'endel/vim-github-colorscheme'
+Bundle 'tpope/vim-commentary'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'mileszs/ack.vim'
-Bundle 'guns/xterm-color-table.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tsaleh/vim-matchit'
+
+" dependency for snipmate
+Bundle 'tomtom/tlib_vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "garbas/vim-snipmate"
+
+Bundle 'tsaleh/vim-align'
+Bundle 'godlygeek/tabular'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
+Bundle 'altercation/vim-colors-solarized'
+"Bundle 'endel/vim-github-colorscheme'
+
+" syntax higlighting
+Bundle 'tpope/vim-liquid'
+Bundle 'groenewege/vim-less'
+Bundle 'nono/vim-handlebars'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'airblade/vim-gitgutter'
+Bundle 'slim-template/vim-slim'
 
 " statusline
 set laststatus=2
@@ -56,6 +69,7 @@ let g:ctrlp_cmd = 'CtrlP'
 " Solarized
 set background=dark
 colorscheme railscasts
+"colorscheme grb256
 
 " default settings
 set backspace=indent,eol,start    " Allow backspacing over everything
@@ -66,7 +80,9 @@ set ruler                         " Always show cursor
 set showcmd                       " Display incomplete commands
 set mouse=a                       " Enable mouse
 set mousehide                     " Hide mouse when typing
-set number                        " Show line numbers
+set number                        " Show line number on current line
+set relativenumber                " show relative numbers
+set hlsearch                      " highlight search
 "set tw=79                         " width of document
 "set nowrap                        " don't automatically wrap on load
 "set fo-=1                         " don't automatically wrap text when typing
@@ -106,7 +122,7 @@ nmap ,n :NERDTreeToggle<CR>
 nmap ,r :NERDTreeFind<CR>
 
 " filetype mappings
-au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru,*.rabl}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Guardfile,Vagrantfile,Thorfile,config.ru,*.rabl,*.pill}    set ft=ruby
 au BufRead,BufNewFile Watchr set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
 au BufRead,BufNewFile *.hjs  set ft=handlebars
@@ -174,7 +190,7 @@ function! RunTests(filename)
         "elseif filereadable("Gemfile")
         "    exec ":!bundle exec rspec --color " . a:filename
         else
-            exec ":!rspec --color --format documentation " . a:filename
+            exec ":!bundle exec spring rspec --color --format documentation " . a:filename
         end
     end
 endfunction
@@ -187,20 +203,26 @@ highlight def link rubyRspec Function
 map <leader>gr :topleft :split config/routes.rb<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 
-" set clipboard to system clipboard
-set clipboard=unnamed
 
 " Vim... Live it... "
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
+"noremap <Up> <nop>
+"noremap <Down> <nop>
+"noremap <Left> <nop>
+"noremap <Right> <nop>
+"inoremap <Up> <nop>
+"inoremap <Down> <nop>
+"inoremap <Left> <nop>
+"inoremap <Right> <nop>
 
 " xmpfilter
+nmap <leader>r <Plug>(xmpfilter-run)
+xmap <leader>r <Plug>(xmpfilter-run)
+imap <leader>r <Plug>(xmpfilter-run)
+
+nmap <leader>m <Plug>(xmpfilter-mark)
+xmap <leader>m <Plug>(xmpfilter-mark)
+imap <leader>m <Plug>(xmpfilter-mark)
+
 nmap <buffer> <F5> <Plug>(xmpfilter-run)
 xmap <buffer> <F5> <Plug>(xmpfilter-run)
 imap <buffer> <F5> <Plug>(xmpfilter-run)
@@ -222,8 +244,11 @@ noremap <Leader><Leader> <C-^>
 " paste toggle
 set pastetoggle=<F8>
 
-" Resize splits when the window is resized
-au VimResized * exe "normal! \<c-w>="
+" split handling
+"Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>=" 
+set splitbelow
+set splitright
 
 " typo fixes
 command! Q q
@@ -236,3 +261,27 @@ command! Vsp vsp
 set nofoldenable                  " Don't fold by default
 set foldlevel=99
 
+
+" Intuitive moving the cursor for wrapped lines
+:map j gj
+:map k gk
+
+" set clipboard to system clipboard
+set clipboard=unnamed
+
+" ag override
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
