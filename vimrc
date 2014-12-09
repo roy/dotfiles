@@ -28,7 +28,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'tsaleh/vim-matchit'
+Bundle 'git://github.com/vim-scripts/matchit.zip'
 
 " dependency for snipmate
 Bundle 'tomtom/tlib_vim'
@@ -187,10 +187,12 @@ function! RunTests(filename)
             exec ":!script/test " . a:filename
         elseif filereadable("bin/test")
             exec ":!bin/test " . a:filename
-        "elseif filereadable("Gemfile")
-        "    exec ":!bundle exec rspec --color " . a:filename
         else
+          if executable("spring")
             exec ":!bundle exec spring rspec --color --format documentation " . a:filename
+          else
+            exec ":!bundle exec rspec --color --format documentation " . a:filename
+          end
         end
     end
 endfunction
@@ -205,14 +207,14 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 
 
 " Vim... Live it... "
-"noremap <Up> <nop>
-"noremap <Down> <nop>
-"noremap <Left> <nop>
-"noremap <Right> <nop>
-"inoremap <Up> <nop>
-"inoremap <Down> <nop>
-"inoremap <Left> <nop>
-"inoremap <Right> <nop>
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
 
 " xmpfilter
 nmap <leader>r <Plug>(xmpfilter-run)
