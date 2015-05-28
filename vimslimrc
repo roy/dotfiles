@@ -1,0 +1,47 @@
+set nocompatible
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Bundle 'scrooloose/nerdtree'
+
+call vundle#end()
+
+filetype plugin indent on     " required!
+syntax enable
+set mouse=a
+set expandtab                     " Use spaces instead of tabs
+set tabstop=2                     " Global tab width
+set shiftwidth=2
+set softtabstop=2
+
+" Nerdtree
+nmap ,n :NERDTreeToggle<CR>
+nmap ,r :NERDTreeFind<CR>
+
+" easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" typo fixes
+command! Q q
+command! W w
+command! Wq wq
+command! Sp sp
+command! Qall qall
+command! Vsp vsp
+
+" Don't fold by default
+set nofoldenable
+set foldlevel=99
+
+" Intuitive moving the cursor for wrapped lines
+:map j gj
+:map k gk
+
+" easier moving of code blocks
+vnoremap < <gv
+vnoremap > >gv
