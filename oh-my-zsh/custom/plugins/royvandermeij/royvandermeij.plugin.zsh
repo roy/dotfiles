@@ -20,7 +20,7 @@ export PATH="$PATH:$HOME/.bin"
 
 # Show contents of directory after cd-ing into it
 chpwd() {
-  ls -lrthG
+  ls -lhG
 }
 
 reload!() {

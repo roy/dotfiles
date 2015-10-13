@@ -17,6 +17,7 @@ call vundle#rc()
 
 " BUNDLES "
 Bundle 'gmarik/vundle'
+Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
@@ -68,8 +69,8 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " Solarized
 set background=dark
-colorscheme railscasts
-"colorscheme grb256
+"colorscheme railscasts
+colorscheme grb256
 
 " default settings
 set backspace=indent,eol,start    " Allow backspacing over everything
@@ -168,33 +169,35 @@ function! SetTestFile()
 endfunction
 
 function! RunTests(filename)
-    " Write the file and run tests for the given filename
-    :w
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    if match(a:filename, '\.feature$') != -1
-        exec ":!script/features " . a:filename
-    else
-        if filereadable("script/test")
-            exec ":!script/test " . a:filename
-        elseif filereadable("bin/test")
-            exec ":!bin/test " . a:filename
-        else
-          if executable("spring")
-            exec ":!bundle exec spring rspec --color --format documentation " . a:filename
-          else
-            exec ":!bundle exec rspec --color --format documentation " . a:filename
-          end
-        end
+  " Write the file and run tests for the given filename
+  :w
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+  :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+
+  " First choice: project-specific test script
+  if filereadable("bin/test")
+    exec ":!bin/test " . a:filename
+  elseif match(a:filename, '\.feature$') != -1
+    exec ":!script/features " . a:filename
+  elseif match(a:filename, '_spec\.rb$') != -1
+    if filereadable("Gemfile")
+      if match(join(readfile('./Gemfile')), 'spring') != -1
+        exec ':!bundle exec spring rspec --color --format documentation ' . a:filename
+      else
+        exec ':!bundle exec rspec --color --format documentation ' . a:filename
+      endif
     end
+  else
+    echo "whoops"
+  endif
 endfunction
 
 " rspec extra's
@@ -207,14 +210,14 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 
 
 " Vim... Live it... "
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
+" noremap <Up> <nop>
+" noremap <Down> <nop>
+" noremap <Left> <nop>
+" noremap <Right> <nop>
+" inoremap <Up> <nop>
+" inoremap <Down> <nop>
+" inoremap <Left> <nop>
+" inoremap <Right> <nop>
 
 " xmpfilter
 nmap <leader>r <Plug>(xmpfilter-run)
@@ -287,3 +290,6 @@ endif
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" disable backup file for crontab
+autocmd filetype crontab setlocal nobackup nowritebackup
