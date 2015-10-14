@@ -12,52 +12,55 @@ endif
 
 " Vundle setup
 filetype off 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" BUNDLES "
-Bundle 'gmarik/vundle'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-commentary'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'mileszs/ack.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'git://github.com/vim-scripts/matchit.zip'
+" Plugins "
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-commentary'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'mileszs/ack.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'git://github.com/vim-scripts/matchit.zip'
 
 " dependency for snipmate
-Bundle 'tomtom/tlib_vim'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "garbas/vim-snipmate"
+Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
 
-Bundle 'tsaleh/vim-align'
-Bundle 'godlygeek/tabular'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tsaleh/vim-align'
+Plugin 'godlygeek/tabular'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 "Bundle 'endel/vim-github-colorscheme'
 
 " syntax higlighting
-Bundle 'tpope/vim-liquid'
-Bundle 'groenewege/vim-less'
-Bundle 'nono/vim-handlebars'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'othree/html5.vim'
-Bundle 'slim-template/vim-slim'
+Plugin 'tpope/vim-liquid'
+Plugin 'groenewege/vim-less'
+Plugin 'nono/vim-handlebars'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'othree/html5.vim'
+Plugin 'slim-template/vim-slim'
+
+" end vundle
+call vundle#end()
+filetype plugin indent on     " required!
 
 " statusline
 set laststatus=2
 let g:Powerline_symbols='unicode'
 let g:Powerline_dividers_override= [ '', [0x2502], '', [0x2502] ]
 
-filetype plugin indent on     " required!
 
 syntax enable
 
